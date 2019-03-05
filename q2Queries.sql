@@ -10,4 +10,4 @@ SELECT 0;
 SELECT 0;
 SELECT 0;
 SELECT 0;
-SELECT 0;
+WITH required_assistants (offerID, count) AS (SELECT cr.offerID, 1+COUNT(cr.rID)/50 FROM course_registrations cr GROUP BY cr.offerID), actual_assistants(offerID, count) AS (SELECT offerID, COUNT(sa.rID) FROM student_assistants sa GROUP BY sa.offerID) SELECT c.name, co.year, co.quartile, co.offerID, aa.nr as actual_count, ra.count as required_count FROM required_assistants ra, actual_assistants aa, course_offers co, courses c WHERE co.offerID = ra.offerID AND co.cID = c.cID AND aa.offerID = co.offerID AND aa.count < ra.count ORDER BY co.offerId;
