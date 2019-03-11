@@ -3,7 +3,8 @@
 -- Do not break long queries to more than one line, and do not leave empty lines between them. 
 -- If you do not know the answer to one of the sub-questions, then write SELECT 0;
 -- Example: Let's say I only know sub-question 3:
-SELECT c.name, cr.grade FROM courses c, student_registrations sr, course_registrations cr, course_offers co WHERE sr.sID = %1% AND sr.dID = %2% AND sr.rID = cr.rID AND cr.offerID = co.offerID AND co.cID = c.cID;
+-- SELECT c.name, cr.grade FROM courses c, student_registrations sr, course_registrations cr, course_offers co WHERE sr.sID = %1% AND sr.dID = %2% AND sr.rID = cr.rID AND cr.offerID = co.offerID AND co.cID = c.cID;
+SELECT 0;
 SELECT 0;
 SELECT 0; 
 SELECT 0;
